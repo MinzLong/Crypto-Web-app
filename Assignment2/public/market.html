@@ -1,0 +1,502 @@
+<!-- Lê Minh Long 104180139 , Nguyễn Đức Lê Nguyên 104224493 ,Trần Minh Quân 104167682  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoSwin</title>
+
+
+  <link rel="shortcut icon" href="./images/Logo_btc.png" type="image/svg+xml">
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header style="box-shadow: 0 0 10px 5px rgba(43, 67, 206, 0.2);">
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./images/Logo_btc.png" width="35" height="35" alt="Cryptex logo">
+        CryptoSwin
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-top" data-nav-link>Homepage</a>
+          </li>
+          <li class="navbar-item">
+            <a href="market.html" class="navbar-top active" data-nav-link>Markets</a>
+          </li>
+          <li class="navbar-item">
+            <a href="tradecrypto.html" class="navbar-top" data-nav-link>Trade Cypto</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-top" data-nav-link>Exchange Rates</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="toggle-button-nav" aria-label="Toggle menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+
+      <div id="userAccountSection" >
+        <!-- Login and Register Buttons -->
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="sign_up.html" class="btn btn-outline LG-button">Register</a>
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #main
+      -->
+
+      <section class="section main" aria-label="main" data-section >
+        <div class="container">
+
+          <div class="main-content">
+
+            <h1 class="h1 main-title">Market <span style="color:rgb(234, 102, 26)">Exploring</span> </h1>
+
+            <p class="main-text">
+              Explore the future of finance with our cutting-edge crypto platform. Secure, user-friendly, and packed with features. Join us in revolutionizing the way you invest and transact!
+            </p>
+            <a href="#market_update" class="btn btn-primary">Explore Now!!</a>
+          
+
+          </div>
+
+          <figure class="main-banner">
+            <img src="./images/Chart_banner.png" width="570" height="448" alt="main banner" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #Top trading
+      -->
+
+      <section class="section trading" aria-label="crypto trading" data-section id="market_trending">
+        <div class="container">
+            <div class="trading-tab">
+                <ul class="title-tab">
+                    <h2 class="section-heading trading-title">Top Trading</h2>  
+                </ul>
+                <ul class="tab-content">
+                    <!-- Dynamically generated cryptocurrency cards will go here -->
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+
+      <!-- Market Update Section -->
+      <section class="section market" aria-label="market update" data-section id="market_update">
+        <div class="container">
+            <div class="title-wrapper">
+                <h2 class="h2 section-title">Market Update</h2>
+            </div>
+            <div class="market-tab">
+                <table class="market-table">
+                    <thead class="table-head">
+                        <tr class="table-row table-title">
+                            <th>Cryptocurrency</th>
+                            <th>Last Price</th>
+                            <th>Change</th>
+                            <th>High</th>
+                            <th>Low</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="market-data">
+                        <!-- Placeholder for dynamic content -->
+                        <tr>
+                          <td data-label="Cryptocurrency">Bitcoin (BTCUSDT)</td>
+                          <td data-label="Last Price" id="btcusdt-price">Loading...</td>
+                          <td data-label="Change" id="btcusdt-change">-</td>
+                          <td data-label="High" id="btcusdt-high">-</td>
+                          <td data-label="Low" id="btcusdt-low">-</td>
+                          <td data-label="Action"><a href="tradecrypto.html" class="btn btn-primary-trade">Trade</a></td>
+                      </tr>
+                      <tr>
+                          <td data-label="Cryptocurrency">Ethereum (ETHUSDT)</td>
+                          <td data-label="Last Price" id="ethusdt-price">Loading...</td>
+                          <td data-label="Change" id="ethusdt-change">-</td>
+                          <td data-label="High" id="ethusdt-high">-</td>
+                          <td data-label="Low" id="ethusdt-low">-</td>
+                          <td data-label="Action"><a href="tradecrypto.html" class="btn btn-primary-trade">Trade</a></td>
+                      </tr>
+                      <tr>
+                        <td>BNB (BNBUSDT)</td>
+                        <td id="bnbusdt-price">Loading...</td>
+                        <td id="bnbusdt-change">-</td>
+                        <td id="bnbusdt-high">-</td>
+                        <td id="bnbusdt-low">-</td>
+                        <td><a href="tradecrypto.html" class="btn btn-primary-trade">Trade</a></td>
+                    </tr>
+                    <tr>
+                        <td>XRP (XRPUSDT)</td>
+                        <td id="xrpusdt-price">Loading...</td>
+                        <td id="xrpusdt-change">-</td>
+                        <td id="xrpusdt-high">-</td>
+                        <td id="xrpusdt-low">-</td>
+                        <td><a href="tradecrypto.html" class="btn btn-primary-trade">Trade</a></td>
+                    </tr>
+                    <tr>
+                        <td>Cardano (ADAUSDT)</td>
+                        <td id="adausdt-price">Loading...</td>
+                        <td id="adausdt-change">-</td>
+                        <td id="adausdt-high">-</td>
+                        <td id="adausdt-low">-</td>
+                        <td><a href="tradecrypto.html" class="btn btn-primary-trade">Trade</a></td>
+                    </tr>
+                    <tr>
+                        <td>Polkadot (DOTUSDT)</td>
+                        <td id="dotusdt-price">Loading...</td>
+                        <td id="dotusdt-change">-</td>
+                        <td id="dotusdt-high">-</td>
+                        <td id="dotusdt-low">-</td>
+                        <td><a href="tradecrypto.html" class="btn btn-primary-trade">Trade</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chainlink (LINKUSDT)</td>
+                        <td id="linkusdt-price">Loading...</td>
+                        <td id="linkusdt-change">-</td>
+                        <td id="linkusdt-high">-</td>
+                        <td id="linkusdt-low">-</td>
+                        <td><a href="tradecrypto.html" class="btn btn-primary-trade">Trade</a></td>
+                    </tr>
+                    <tr>
+                        <td>Litecoin (LTCUSDT)</td>
+                        <td id="ltcusdt-price">Loading...</td>
+                        <td id="ltcusdt-change">-</td>
+                        <td id="ltcusdt-high">-</td>
+                        <td id="ltcusdt-low">-</td>
+                        <td><a href="tradecrypto.html" class="btn btn-primary-trade">Trade</a></td>
+                    </tr>
+                    <tr>
+                        <td>Dogecoin (DOGEUSDT)</td>
+                        <td id="dogeusdt-price">Loading...</td>
+                        <td id="dogeusdt-change">-</td>
+                        <td id="dogeusdt-high">-</td>
+                        <td id="dogeusdt-low">-</td>
+                        <td><a href="tradecrypto.html" class="btn btn-primary-trade">Trade</a></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Cryptocurrency">Polygon (MATICUSDT)</td>
+                      <td data-label="Last Price" id="maticusdt-price">Loading...</td>
+                      <td data-label="Change" id="maticusdt-change">-</td>
+                      <td data-label="High" id="maticusdt-high">-</td>
+                      <td data-label="Low" id="maticusdt-low">-</td>
+                      <td data-label="Action"><a href="tradecrypto.html" class="btn btn-primary-trade">Trade</a></td>
+                  </tr>
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    </article>
+  </main>
+
+ <!---Footer-->
+
+ <footer class="footer" style="box-shadow: 0 0 10px 5px rgba(43, 67, 206, 0.2);">
+
+  <div class="footer-top" data-section>
+    <div class="container">
+
+      <div class="footer-banner">
+
+        <a href="#" class="logo">
+          <img src="./images/Logo_btc.png" width="50" height="50" alt="Cryptex logo">
+          CryptoSwin
+        </a>
+
+        <h2 class="footer-underline">.....................................................</h2>
+
+       
+
+
+      </div>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">Products</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-series">Spot</a>
+        </li>
+        
+        <li>
+          <a href="#" class="footer-series">Futures</a>
+        </li>
+        
+        <li>
+          <a href="#" class="footer-series">Options</a>
+        </li>
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">Services</p>
+        </li>
+
+        <li>
+          <a href="tradecrypto.html" class="footer-series">Trade Crypto</a>
+        </li>
+      
+        <li>
+          <a href="#" class="footer-series">Custom Service</a>
+        </li>
+      
+        <li>
+          <a href="#" class="footer-series">Another Service</a>
+        </li>
+
+      
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">Support</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-series">Help Center</a>
+        </li>
+        <li>
+          <a href="#" class="footer-series">Contact Us</a>
+        </li>
+        
+        <li>
+          <a href="#" class="footer-series">FAQs</a>
+        </li>
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">About Us</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-series">Github</a>
+        </li>
+        <li>
+          <a href="#" class="footer-series">Youtube</a>
+        </li>
+        <li>
+          <a href="#" class="footer-series">Facebook</a>
+        </li>
+
+
+      </ul>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./js/script.js" defer></script>
+
+  <script>
+  function checkUserSession() {
+    const userAccountSection = document.getElementById('userAccountSection');
+    const user = sessionStorage.getItem('user');
+  
+    if (user) {
+      const userData = JSON.parse(user);
+      userAccountSection.innerHTML = `
+        <div class="user-menu">
+          <button class="user-btn" id="dropdownButton" onclick="toggleDropdown()">
+           <span>User: ${userData.username} <i class="arrow down"></i></span>  
+          </button>
+          <div class="dropdown-content" id="userDropdown" style="display: none;">
+            <span class="wallet-address">Wallet Address: ${userData.addressId}</span>
+            <button onclick="handleLogout()">Logout</button>
+          </div>
+        </div>
+      `;
+    } else {
+      userAccountSection.innerHTML = `
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="sign_up.html" class="btn btn-outline LG-button">Register</a>
+      `;
+    }
+  }
+  
+  // Function to handle the dropdown display
+  function toggleDropdown() {
+    const dropdown = document.getElementById("userDropdown");
+    if (dropdown.style.display === "none") {
+      dropdown.style.display = "block";
+    } else {
+      dropdown.style.display = "none";
+    }
+  }
+  
+  // Call checkUserSession when the page loads to update the user interface
+  document.addEventListener('DOMContentLoaded', checkUserSession);
+  
+  
+    // Logout function to clear the session and update the UI
+    window.handleLogout = function() {
+      sessionStorage.removeItem('user');
+      checkUserSession();
+      // Optionally redirect to home page or login page
+      window.location.href = 'index.html';
+    }
+  
+
+    //Coin update Market -price
+    document.addEventListener("DOMContentLoaded", function() {
+    const symbols = ['btcusdt', 'ethusdt', 'bnbusdt', 'xrpusdt', 'adausdt', 'dotusdt', 'linkusdt', 'ltcusdt', 'dogeusdt', 'maticusdt'];
+
+    symbols.forEach(symbol => {
+        const ws = new WebSocket(`wss://stream.binance.com:9443/ws/${symbol}@ticker`);
+        ws.onmessage = event => {
+            const data = JSON.parse(event.data);
+            const priceElementId = `${symbol}-price`;
+            const changeElementId = `${symbol}-change`;
+            const highElementId = `${symbol}-high`;
+            const lowElementId = `${symbol}-low`;
+
+            updatePriceAndInfo(priceElementId, changeElementId, highElementId, lowElementId, data);
+        };
+    });
+
+    function updatePriceAndInfo(priceElementId, changeElementId, highElementId, lowElementId, data) {
+        const priceElement = document.getElementById(priceElementId);
+        const changeElement = document.getElementById(changeElementId);
+        const highElement = document.getElementById(highElementId);
+        const lowElement = document.getElementById(lowElementId);
+
+        if (priceElement && changeElement && highElement && lowElement) {
+            const lastPrice = parseFloat(data.c).toFixed(2);
+            const priceChange = parseFloat(data.p).toFixed(2);
+            const highPrice = parseFloat(data.h).toFixed(2);
+            const lowPrice = parseFloat(data.l).toFixed(2);
+
+            updateCell(priceElement, lastPrice, data);
+            changeElement.textContent = `${priceChange}%`;
+            highElement.textContent = highPrice;
+            lowElement.textContent = lowPrice;
+        }
+    }
+
+    function updateCell(element, newValue, data) {
+        if (element && newValue !== parseFloat(element.textContent)) {
+            const oldValue = parseFloat(element.textContent) || 0;
+            element.textContent = newValue;
+            element.style.color = newValue > oldValue ? 'green' : 'red';
+            setTimeout(() => { element.style.color = 'cyan'; }, 500);
+        }
+    }
+});
+
+
+// Khi tài liệu được tải xong, thực hiện kết nối WebSocket và cập nhật liên tục
+document.addEventListener('DOMContentLoaded', () => {
+    const tradingSection = document.querySelector('.tab-content');
+    if (!tradingSection) {
+        console.error('Trading section not found!');
+        return;
+    }
+
+    // Thiết lập WebSocket connection
+    const ws = new WebSocket('wss://stream.binance.com:9443/ws/!ticker@arr');
+
+    ws.onmessage = (event) => {
+        const tickers = JSON.parse(event.data);
+        // Sắp xếp và lấy 4 giá cao nhất
+        const sortedTickers = tickers.sort((a, b) => parseFloat(b.c) - parseFloat(a.c)).slice(0, 4);
+
+        tradingSection.innerHTML = ''; // Xóa các card cũ
+
+        sortedTickers.forEach(ticker => {
+          //<img src="./images/placeholder.png" width="24" height="24" alt="${ticker.s} logo">
+            const coinElement = `
+                <li>
+                    <div class="trading-card">
+                        <div class="card-title-wrapper">
+                          
+                            <a href="#" class="card-title">${ticker.s}</a>
+                        </div>
+                        <div class="card-statistic">
+                            <data class="current-price" value="${ticker.c}">${parseFloat(ticker.c).toFixed(2)}</data>
+                            <div class="badge ${parseFloat(ticker.P) < 0 ? 'red' : 'green'}">${parseFloat(ticker.P).toFixed(2)}%</div>
+                        </div>
+                    </div>
+                </li>
+            `;
+            tradingSection.innerHTML += coinElement;
+        });
+    };
+});
+
+</script>
+
+    
+    </script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

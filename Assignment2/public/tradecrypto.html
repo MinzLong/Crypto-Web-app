@@ -1,0 +1,341 @@
+<!-- Lê Minh Long 104180139 , Nguyễn Đức Lê Nguyên 104224493 ,Trần Minh Quân 104167682  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoSwin</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./images/Logo_btc.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Chart.js library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header style="box-shadow: 0 0 10px 5px rgba(43, 67, 206, 0.2);">
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./images/Logo_btc.png" width="35" height="35" alt="Cryptex logo">
+        CryptoSwin
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-top" data-nav-link>Homepage</a>
+          </li>
+          <li class="navbar-item">
+            <a href="market.html" class="navbar-top" data-nav-link>Markets</a>
+          </li>
+          <li class="navbar-item">
+            <a href="tradecrypto.html" class="navbar-top active" data-nav-link>Trade Cypto</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-top" data-nav-link>Exchange Rates</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="toggle-button-nav" aria-label="Toggle menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+
+      <div id="userAccountSection" >
+        <!-- Login and Register Buttons -->
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="sign_up.html" class="btn btn-outline LG-button">Register</a>
+      </div>
+      
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #main
+      -->
+
+      <section class="section main" aria-label="main" data-section>
+        <div class="container">
+
+          <div class="main-content">
+
+            <h1 class="h1 main-title" style="color:rgb(26, 71, 221)">Crypto <span style="color:rgb(173, 115, 6)">Trading</span> </h1>
+            <p class="main-text">             
+            Revolutionize your investment approach with our cutting-edge crypto platform.
+            It's user-friendly,and feature-packed, secure, ensuring a seamless and innovative
+            experience in the future of finance. Join us now!
+            </p>
+            <a href="#trading_section" class="btn btn-primary">Trading Now!!</a>
+          </div>
+
+          <figure class="main-banner">
+            <img src="./images/banner_get.png" width="570" height="448" alt="main banner" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+      <section class="section app" aria-label="app" data-section id="trading_section">
+        <div class="container">
+
+          <div class="app-content">
+
+            <h2 class="h2 section-title">Liberate your, trade with certainty!</h2>
+
+            <p class="section-text">
+              Trading with CryptoSwin, you can be sure your trading skills are matched.
+            </p>
+            <ul class="section-list">
+
+              <li class="section-item">
+                <div class="title-wrapper">
+                  <h3 class="h3 item-title">Balance: 0.3 &#8383 </h3>
+                </div>                
+              </li>    
+
+              <li class="section-item">
+                <div class="title-wrapper">
+                
+                  <h3 class="h3 item-title">Amount:</h3>
+                  <input type="number" id="amount" name="amount" class="trade-crypto-input" placeholder="Type your amount" step="0.1" min="0">
+                </div>               
+              </li>
+
+            </ul>
+
+            <div class="app-wrapper">
+              <a href="#">
+                <!-- <img src="./images/BUY.png" width="120" height="40" loading="lazy" class="trading-button"> -->
+                <button style="background-color: rgba(84, 246, 84, 0.607); padding: 10px 30px; border-radius: 10px; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='green'" onmouseout="this.style.backgroundColor='rgba(84, 246, 84, 0.607)'">Buy</button>
+
+                
+                
+              </a>
+              <a href="#">
+                <!-- <img src="./images/SELL.png" width="120" height="40" loading="lazy" class="trading-button"> -->
+                <button style="background-color: rgba(253, 86, 86, 0.595); padding: 10px 30px; border-radius: 10px; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='rgba(253, 86, 86, 0.595)'">Sell</button>
+              </a>
+            </div>
+          </div>
+          <div class="app-banner">
+            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+              <!-- Your canvas element for the chart -->
+              <canvas id="myChart" width="450" height="290"></canvas>
+      
+            </div>
+            
+          </div>
+
+
+        </div>
+        <h2 style="width: 100%; color: #333; font-size: 40px; margin-bottom: 10px;text-align: center; font-weight: bold">Crypto transactions Rates</h2>
+
+      <!-- Center the chart using flexbox -->
+      <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <!-- Your canvas element for the second chart -->
+        <canvas id="interactiveChart" width="800" height="400"></canvas>
+      </div>
+      
+      </section>
+    </article>
+  </main>
+
+  <!---Footer-->
+
+  <footer class="footer" style="box-shadow: 0 0 10px 5px rgba(43, 67, 206, 0.2);">
+
+    <div class="footer-top" data-section>
+      <div class="container">
+
+        <div class="footer-banner">
+
+          <a href="#" class="logo">
+            <img src="./images/Logo_btc.png" width="50" height="50" alt="Cryptex logo">
+            CryptoSwin
+          </a>
+
+          <h2 class="footer-underline">.....................................................</h2>
+
+          
+
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Products</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-series">Spot</a>
+          </li>
+          
+          <li>
+            <a href="#" class="footer-series">Futures</a>
+          </li>
+          
+          <li>
+            <a href="#" class="footer-series">Options</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Services</p>
+          </li>
+
+          <li>
+            <a href="/trade-crypto" class="footer-series">Trade Crypto</a>
+          </li>
+        
+          <li>
+            <a href="/custom-service" class="footer-series">Custom Service</a>
+          </li>
+        
+          <li>
+            <a href="/another-service" class="footer-series">Another Service</a>
+          </li>
+
+        
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Support</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-series">Help Center</a>
+          </li>
+          <li>
+            <a href="/contact-us" class="footer-series">Contact Us</a>
+          </li>
+          
+          <li>
+            <a href="/faq" class="footer-series">FAQs</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">About Us</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-series">Github</a>
+          </li>
+          <li>
+            <a href="#" class="footer-series">Youtube</a>
+          </li>
+          <li>
+            <a href="#" class="footer-series">Facebook</a>
+          </li>
+
+
+        </ul>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./js/script.js" defer></script>
+
+  <script>
+  function checkUserSession() {
+    const userAccountSection = document.getElementById('userAccountSection');
+    const user = sessionStorage.getItem('user');
+  
+    if (user) {
+      const userData = JSON.parse(user);
+      userAccountSection.innerHTML = `
+        <div class="user-menu">
+          <button class="user-btn" id="dropdownButton" onclick="toggleDropdown()">
+           <span>User: ${userData.username} <i class="arrow down"></i></span>  
+          </button>
+          <div class="dropdown-content" id="userDropdown" style="display: none;">
+            <span class="wallet-address">Wallet Address: ${userData.addressId}</span>
+            <button onclick="handleLogout()">Logout</button>
+          </div>
+        </div>
+      `;
+    } else {
+      userAccountSection.innerHTML = `
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="sign_up.html" class="btn btn-outline LG-button">Register</a>
+      `;
+    }
+  }
+  
+  // Function to handle the dropdown display
+  function toggleDropdown() {
+    const dropdown = document.getElementById("userDropdown");
+    if (dropdown.style.display === "none") {
+      dropdown.style.display = "block";
+    } else {
+      dropdown.style.display = "none";
+    }
+  }
+  
+  // Call checkUserSession when the page loads to update the user interface
+  document.addEventListener('DOMContentLoaded', checkUserSession);
+  
+  
+    // Logout function to clear the session and update the UI
+    window.handleLogout = function() {
+      sessionStorage.removeItem('user');
+      checkUserSession();
+      // Optionally redirect to home page or login page
+      window.location.href = 'index.html';
+    }
+    </script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

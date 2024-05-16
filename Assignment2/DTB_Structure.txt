@@ -1,0 +1,33 @@
+// First, import the 'nodes.csv' and create or update Address nodes with their type.
+LOAD CSV WITH HEADERS FROM 'file:///nodes.csv' AS row
+MERGE (address:Address {addressId: row.addressId})
+ON CREATE SET address.type = row.type
+ON MATCH SET address.type = row.type;
+
+//LOAD btc and eth
+LOAD CSV WITH HEADERS FROM 'file:///nodes.csv' AS row
+MERGE (address:Address {addressId: row.addressId})
+ON CREATE SET address.type = row.type, address.btc = toFloat(row.btc), address.eth = toInteger(row.eth)
+ON MATCH SET address.type = row.type, address.btc = toFloat(row.btc), address.eth = toInteger(row.eth);
+
+LOAD CSV WITH HEADERS FROM 'file:///nodes.csv' AS row
+MERGE (a:Address {addressId: row.addressId})
+ON CREATE SET a.username = row.username, a.password = row.password
+ON MATCH SET a.username = row.username, a.password = row.password;
+
+
+// Then, import the 'relationships.csv' and create the transactions between Address nodes.
+LOAD CSV WITH HEADERS FROM 'file:///relationships.csv' AS row
+MATCH (from:Address {addressId: row.from_address}), (to:Address {addressId: row.to_address})
+CREATE (from)-[r:TRANSACTION]->(to)
+SET r.hash = row.hash,
+    r.value = toFloat(row.value),
+    r.input = row.input,
+    r.transaction_index = toInteger(row.transaction_index),
+    r.gas = toInteger(row.gas),
+    r.gas_used = toInteger(row.gas_used),
+    r.gas_price = toInteger(row.gas_price),
+    r.transaction_fee = toFloat(row.transaction_fee),
+    r.block_number = toInteger(row.block_number),
+    r.block_hash = row.block_hash,
+    r.block_timestamp = toInteger(row.block_timestamp);

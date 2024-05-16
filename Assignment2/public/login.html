@@ -1,0 +1,255 @@
+<!-- Lê Minh Long 104180139 , Nguyễn Đức Lê Nguyên 104224493 ,Trần Minh Quân 104167682  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoSwin</title>
+  <link rel="shortcut icon" href="./images/Logo_btc.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./images/Logo_btc.png" width="32" height="32" alt="Cryptex logo">
+        CryptoMagnet
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-top" data-nav-link>Homepage</a>
+          </li>
+          <li class="navbar-item">
+            <a href="market.html" class="navbar-top" data-nav-link>Markets</a>
+          </li>
+          <li class="navbar-item">
+            <a href="tradecrypto.html" class="navbar-top" data-nav-link>Trade Cypto</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-top" data-nav-link>Exchange Rates</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="toggle-button-nav" aria-label="Toggle menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+
+      <a href="sign_up.html" class="btn btn-outline">Sign Up</a>
+
+    </div>
+  </header>
+
+
+
+  <main>
+    <article>
+      <section class="section main " aria-label="main" data-section>
+        <div class="container ">
+          <div class="main-content form-content">
+            <h1 class="h1 main-title form-title">Login</h1>
+            <form id="loginForm" class="main-content ">
+              <div class="text-input">
+                <label class="label-input" for="username">Username:</label>
+                <input type="text" id="username" name="username" class="form-text-input" placeholder="Enter Username" required>
+              </div>
+              <br>
+              <div class="text-input">
+                <label class="label-input" for="password">Password:</label>
+                <input type="password" id="password" name="password" class="form-text-input" placeholder="Enter Password" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+          <figure class="main-banner">
+            <img src="./images/LogoBlockChain.png" width="400" height="300" alt="main banner" class="form-banner">
+          </figure>
+        </div>
+      </section>
+    </article>
+  </main>
+
+<!---Footer-->
+
+<footer class="footer">
+
+  <div class="footer-top" data-section>
+    <div class="container">
+
+      <div class="footer-banner">
+
+        <a href="#" class="logo">
+          <img src="./images/Logo_btc.png" width="50" height="50" alt="Cryptex logo">
+          CryptoSwin
+        </a>
+
+        <h2 class="footer-underline">.....................................................</h2>
+
+       
+
+
+      </div>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">Products</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-series">Spot</a>
+        </li>
+        
+        <li>
+          <a href="#" class="footer-series">Futures</a>
+        </li>
+        
+        <li>
+          <a href="#" class="footer-series">Options</a>
+        </li>
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">Services</p>
+        </li>
+
+        <li>
+          <a href="/trade-crypto" class="footer-series">Trade Crypto</a>
+        </li>
+      
+        <li>
+          <a href="/custom-service" class="footer-series">Custom Service</a>
+        </li>
+      
+        <li>
+          <a href="/another-service" class="footer-series">Another Service</a>
+        </li>
+
+      
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">Support</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-series">Help Center</a>
+        </li>
+        <li>
+          <a href="/contact-us" class="footer-series">Contact Us</a>
+        </li>
+        
+        <li>
+          <a href="/faq" class="footer-series">FAQs</a>
+        </li>
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">About Us</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-series">Github</a>
+        </li>
+        <li>
+          <a href="#" class="footer-series">Youtube</a>
+        </li>
+        <li>
+          <a href="#" class="footer-series">Facebook</a>
+        </li>
+
+
+      </ul>
+
+    </div>
+  </div>
+</footer>   
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./js/script.js" defer></script>
+  
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+  const loginForm = document.getElementById('loginForm');
+
+  loginForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, password })
+    })
+    .then(response => {
+      if (!response.ok) {
+        // Convert non-200 HTTP responses to errors
+        return response.json().then(data => Promise.reject(data));
+      }
+      return response.json();
+    })
+    .then(data => {
+      alert('Login successful! Welcome, ' + data.user.username); // Add custom welcome message
+      // Save user data to session storage or cookies for later use
+      sessionStorage.setItem('user', JSON.stringify(data.user));
+      window.location.href = '/index.html'; // Adjust as needed
+    })
+    .then(data => {
+      window.location.href = '/index.html'; // Adjust as needed
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Login failed: ' + error.error); // Displaying the error message from server
+    });
+  });
+});
+
+
+  </script>
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

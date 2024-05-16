@@ -1,0 +1,548 @@
+<!-- Lê Minh Long 104180139 , Nguyễn Đức Lê Nguyên 104224493 ,Trần Minh Quân 104167682  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoSwin</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/Logo_btc.png" type="image/svg+xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/neovis.js/dist/neovis.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header class="header" data-header style="box-shadow: 0 0 10px 5px rgba(43, 67, 206, 0.2);">
+    <div class="container">
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <img src="./images/Logo_btc.png" width="35" height="35" alt="Cryptex logo">
+        CryptoSwin
+      </a>
+
+      <!-- Navigation -->
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-top active" data-nav-link>Homepage</a>
+          </li>
+          <li class="navbar-item">
+            <a href="market.html" class="navbar-top" data-nav-link>Markets</a>
+          </li>
+          <li class="navbar-item">
+            <a href="tradecrypto.html" class="navbar-top" data-nav-link>Trade Crypto</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-top" data-nav-link>Exchange Rates</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Navigation Toggle Button -->
+      <button class="toggle-button-nav" aria-label="Toggle menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+
+      <div id="userAccountSection" >
+        <!-- Login and Register Buttons -->
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="sign_up.html" class="btn btn-outline LG-button">Register</a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content -->
+
+  <main>
+    <article>
+
+      <!-- Main Section -->
+
+      <section class="section main" aria-label="main" data-section>
+        <div class="container">
+
+          <div class="main-content">
+
+            <!-- Main Title and Search Input -->
+            <h1 class="h1 main-title">Wallet <span style="color:rgb(66, 104, 208)">Exploring</span> </h1>
+            <input type="text" id="searchInput" class="main-text-input" placeholder="Enter Wallet Address">
+            <button id="searchButton" class="btn btn-primary">Search</button>
+            
+          </div>
+
+          <!-- Main Banner Image -->
+          <figure class="main-banner">
+            <img src="./images/wallet_btc.png" width="570" height="448" alt="main banner" class="w-100">
+          </figure>
+
+        </div>
+
+
+        
+      </section>
+<!-- Wallet Information Section -->
+
+ <section class="section about" aria-label="about" data-section id="wallet_information"
+ style="box-shadow: 0 0 10px 5px rgba(43, 67, 206, 0.2);">
+ <div class="container">
+
+   <!-- Wallet Information Banner Image -->
+   <figure class="about-banner">
+     <img src="./images/wallet.png" width="648" height="436" loading="lazy" alt="about banner"
+       class="w-100">
+   </figure>
+
+   <div class="about-content">
+
+     <!-- Wallet Information Titles and Details -->
+     <h2 class="h2 section-title">Wallet Information</h2>
+     <h3 class="h3 section-title" id="walletAddressDisplay" style="color:rgba(10, 10, 10, 0.326);">---</h3><br>
+     <h3 class="h4 section-title">Balance:
+      <span class="bitcoin" style="text-decoration:underline; display: inline;">---</span>
+      <span style="color: rgb(224, 24, 24); display: inline;"> Bitcoin</span>,
+      <span class="ethereum" style="text-decoration:underline; display: inline;">---</span>
+      <span style="color: rgb(168, 159, 99); display: inline;"> Ethereum</span>
+    </h3><br>
+    
+
+     <h3 class="h4 section-title">Explorer Link:
+       <a href="#" style="text-decoration:underline; display: inline;color: rgb(58, 109, 190);">Blockchain
+         Explorer Link</a>
+     </h3> <br>
+     <h3 class="h4 section-title">Type:
+      <span class="wallet-type" style="color: rgba(6, 157, 160, 0.552); display: inline;">---</span>
+    </h3>
+     <p class="section-text">
+       Explore the blockchain transactions and history of this wallet by clicking on the
+       <a href="#" style="text-decoration:underline; color: rgb(58, 109, 190);display: inline;">Blockchain Explorer
+         Link</a>.
+       The wallet is currently in an <span class="bitcoin"
+         style="color: rgba(8, 25, 122, 0.552);display: inline;">active</span> status.
+       Experience diverse trading options on our platform, including Spot Trade, Futures Trade, P2P, Staking,
+       Mining, and margin.
+     </p>
+
+     <a href="#transaction_goto" class="btn btn-primary" id="recent_transactions">Recent Transactions</a>
+   </div>
+
+ </div>
+</section>
+<!-- Transaction Section -->
+
+<section class="section instruction" aria-label="instruction" data-section id="transaction_goto"
+style="box-shadow: 0 0 10px 5px rgba(43, 67, 206, 0.2);">
+<div class="container">
+
+  <!-- Latest Transaction Title -->
+  <h2 class="h2 section-title">Latest Transactions</h2>
+
+  <!-- Wallet Address -->
+  <p class="section-text" id="walletTransactionAddressDisplay">---</p>
+  <!-- Transaction Table -->
+
+  <div id="transactions_section" class="transactions-section">
+    <button class="btn btn-toggle-view" onclick="toggleView()">Show Chart</button>
+
+
+    <div class="table-container">
+      <table id="transactions_table">
+        <thead>
+          <tr>
+            <th>From Address</th>
+            <th>To Address</th>
+            <th>Hash</th>
+            <th>Value</th>
+            <th>Transaction Index</th>
+            <th>Gas</th>
+            <th>Gas Used</th>
+            <th>Gas Price</th>
+            <th>Transaction Fee</th>
+            <th>Block Number</th>
+            <th>Block Hash</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Transaction rows will be added here dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-container" style="position: relative; height:80%; width:100% ; display: none;">
+      <canvas id="transactionChart"></canvas>
+    </div>
+    
+  
+  </div>
+  
+</div>
+
+</section>
+
+  </article>
+  </main>
+
+  <!-- Footer Section -->
+
+  <footer class="footer" style="box-shadow: 0 0 10px 5px rgba(43, 67, 206, 0.2);">
+    <div class="footer-top" data-section>
+      <div class="container">
+
+        <!-- Footer Banner and Logo -->
+        <div class="footer-banner">
+          <a href="#" class="logo">
+            <img src="./images/Logo_btc.png" width="50" height="50" alt="Cryptex logo">
+            CryptoSwin
+          </a>
+          <h2 class="footer-underline">.....................................................</h2>
+        </div>
+
+        <!-- Footer Lists -->
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Products</p>
+          </li>
+          <li>
+            <a href="#" class="footer-series">Spot</a>
+          </li>
+          <li>
+            <a href="#" class="footer-series">Futures</a>
+          </li>
+          <li>
+            <a href="#" class="footer-series">Options</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Services</p>
+          </li>
+          <li>
+            <a href="/trade-crypto" class="footer-series">Trade Crypto</a>
+          </li>
+          <li>
+            <a href="/custom-service" class="footer-series">Custom Service</a>
+          </li>
+          <li>
+            <a href="/another-service" class="footer-series">Another Service</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Support</p>
+          </li>
+          <li>
+            <a href="#" class="footer-series">Help Center</a>
+          </li>
+          <li>
+            <a href="/contact-us" class="footer-series">Contact Us</a>
+          </li>
+          <li>
+            <a href="/faq" class="footer-series">FAQs</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">About Us</p>
+          </li>
+          <li>
+            <a href="#" class="footer-series">Github</a>
+          </li>
+          <li>
+            <a href="#" class="footer-series">Youtube</a>
+          </li>
+          <li>
+            <a href="#" class="footer-series">Facebook</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JS -->
+<script src="./js/script.js" defer></script>
+  <script>
+
+function checkUserSession() {
+  const userAccountSection = document.getElementById('userAccountSection');
+  const user = sessionStorage.getItem('user');
+
+  if (user) {
+    const userData = JSON.parse(user);
+    userAccountSection.innerHTML = `
+      <div class="user-menu">
+        <button class="user-btn" id="dropdownButton" onclick="toggleDropdown()">
+         <span>User: ${userData.username} <i class="arrow down"></i></span>  
+        </button>
+        <div class="dropdown-content" id="userDropdown" style="display: none;">
+          <span class="wallet-address">Wallet Address: ${userData.addressId}</span>
+          <button onclick="handleLogout()">Logout</button>
+        </div>
+      </div>
+    `;
+  } else {
+    userAccountSection.innerHTML = `
+      <a href="login.html" class="btn btn-outline">Login</a>
+      <a href="sign_up.html" class="btn btn-outline LG-button">Register</a>
+    `;
+  }
+}
+
+// Function to handle the dropdown display
+function toggleDropdown() {
+  const dropdown = document.getElementById("userDropdown");
+  if (dropdown.style.display === "none") {
+    dropdown.style.display = "block";
+  } else {
+    dropdown.style.display = "none";
+  }
+}
+
+// Call checkUserSession when the page loads to update the user interface
+document.addEventListener('DOMContentLoaded', checkUserSession);
+
+
+  // Logout function to clear the session and update the UI
+  window.handleLogout = function() {
+    sessionStorage.removeItem('user');
+    checkUserSession();
+    // Optionally redirect to home page or login page
+    window.location.href = 'index.html';
+  }
+  
+
+  // When the DOM is fully loaded, check the user session
+  document.addEventListener('DOMContentLoaded', checkUserSession);
+  
+  // Search infor in wallet address list
+    document.addEventListener('DOMContentLoaded', function () {
+      const searchButton = document.getElementById('searchButton');
+      const recentTransactionsButton = document.getElementById('recent_transactions');
+    
+      recentTransactionsButton.addEventListener('click', function () {
+        const transactionsTableBody = document.querySelector('#transactions_table tbody');
+        if (transactionsTableBody.childElementCount === 0) {
+          alert('No transactions found.');
+        }
+      });
+    
+      searchButton.addEventListener('click', async function () {
+        const walletAddressInput = document.getElementById('searchInput').value;
+        if (!walletAddressInput) {
+          alert('Please enter a wallet address.');
+          return;
+        }
+    
+        const formattedAddress = `0x${walletAddressInput.substring(2,10)}***${walletAddressInput.slice(-4)}`;
+        document.getElementById('walletAddressDisplay').textContent = formattedAddress;
+        document.getElementById('walletTransactionAddressDisplay').textContent = formattedAddress;
+    
+        try {
+          const walletInfoResponse = await fetch(`/api/wallet/${walletAddressInput}`);
+          const walletInfo = await walletInfoResponse.json();
+      
+          if (walletInfo.length > 0) {
+            const wallet = walletInfo[0];
+            document.querySelector('.wallet-type').textContent = wallet.type;
+            // Update the Bitcoin balances
+            document.querySelector('.bitcoin').textContent = wallet.btc !== undefined ? wallet.btc : '---';
+            // Update the Ethereum balances
+            const ethBalance = wallet.eth && wallet.eth.low ? wallet.eth.low : '---';
+            document.querySelector('.ethereum').textContent = ethBalance;
+
+            fetchAndDrawTransactionChart(walletAddressInput);//draw the transaction chart for this wallet
+
+          } else {
+            alert('No wallet found with that address.');
+          }
+        } catch (error) {
+          console.error('Error fetching wallet info:', error);
+          alert('Failed to fetch wallet information. Please try again later.');
+        }
+    
+        try {
+          const transactionsResponse = await fetch(`/api/wallet/${walletAddressInput}/transactions`);
+          const transactions = await transactionsResponse.json();
+    
+          const tableBody = document.querySelector('#transactions_table tbody');
+          tableBody.innerHTML = '';
+    
+          transactions.forEach(transaction => {
+            const row = tableBody.insertRow();
+    
+            const formattedHash = `${transaction.hash.substring(0, 5)}***${transaction.hash.substring(transaction.hash.length - 6)}`;
+            const formattedBlockHash = `${transaction.block_hash.substring(0, 5)}***${transaction.block_hash.substring(transaction.block_hash.length - 6)}`;
+            const formattedValue = Number(transaction.value).toExponential(2);
+            const formattedTransactionFee = Number(transaction.transaction_fee).toExponential(2);
+    
+            const createAddressCell = (address) => {
+              const cell = row.insertCell();
+              cell.textContent = `0x${address.substring(2,10)}***${address.slice(-4)}`;
+              cell.dataset.fullAddress = address;
+              cell.classList.add('copyable-address');
+              if (address === walletAddressInput) {
+                cell.classList.add('highlighted-address');
+              }
+              return cell;
+            };
+    
+            createAddressCell(transaction.from_address);
+            createAddressCell(transaction.to_address);
+            row.insertCell().textContent = formattedHash;
+            row.insertCell().textContent = formattedValue;
+            row.insertCell().textContent = transaction.transaction_index;
+            row.insertCell().textContent = transaction.gas;
+            row.insertCell().textContent = transaction.gas_used;
+            row.insertCell().textContent = transaction.gas_price;
+            row.insertCell().textContent = formattedTransactionFee;
+            row.insertCell().textContent = transaction.block_number;
+            row.insertCell().textContent = formattedBlockHash;
+          });
+    
+          document.getElementById('wallet_information').scrollIntoView({ behavior: 'smooth' });
+    
+        } catch (error) {
+          console.error('Error fetching transactions:', error);
+          alert('Failed to fetch transactions. Please try again later.');
+        }
+      });
+    
+      // Event listener for copying address on click
+      document.querySelector('#transactions_table tbody').addEventListener('click', function(event) {
+        if (event.target.classList.contains('copyable-address')) {
+          const fullAddress = event.target.dataset.fullAddress;
+          navigator.clipboard.writeText(fullAddress).then(() => {
+            alert('Address copied to clipboard!');
+          }).catch(err => {
+            console.error('Error copying address:', err);
+          });
+        }
+      });
+    });
+    
+// // Switching between table view and graph view
+// tableViewBtn.addEventListener('click', function() {
+//   document.getElementById('transactions_table').style.display = 'block';
+//   document.getElementById('viz').style.display = 'none';
+// });
+
+function toggleView() {
+  var chartContainer = document.querySelector('.chart-container');
+  var transactionsSection = document.querySelector('.transactions-section .table-container');
+  var toggleButton = document.getElementById('toggleViewButton'); // Access the toggle button
+  
+  // Check the current display state and switch it
+  if (chartContainer.style.display === 'none') {
+    chartContainer.style.display = 'block';
+    transactionsSection.style.display = 'none';
+    toggleButton.textContent = 'Show Table'; // Update button text to reflect the next action
+  } else {
+    chartContainer.style.display = 'none';
+    transactionsSection.style.display = 'block';
+    toggleButton.textContent = 'Show Chart'; // Update button text to reflect the next action
+  }
+}
+
+var transactionChartInstance = null;
+
+// This function could be directly added to your existing code.
+function fetchAndDrawTransactionChart(walletAddress) {
+  // Fetch the average buy and sell values for the given address
+  fetch(`/api/transactions/average/${walletAddress}`)
+    .then(response => response.json())
+    .then(data => {
+      // Assuming data.avgBuyValue and data.avgSellValue are the expected properties
+      drawTransactionChart(data);
+    })
+    .catch(error => {
+      console.error('Error fetching transaction average data:', error);
+      alert('Failed to fetch transaction average data. Please try again later.');
+    });
+}
+
+function drawTransactionChart(data) {
+  var ctx = document.getElementById('transactionChart').getContext('2d');
+  // Check if there is an existing chart instance and destroy it
+  if (transactionChartInstance) {
+    transactionChartInstance.destroy();
+  }
+  transactionChartInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Average Buy Value', 'Average Sell Value'],
+      datasets: [{
+        label: 'Average Transaction Values (in Wei)',
+        data: [data.avgBuyValue, data.avgSellValue],
+        backgroundColor: [
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            color: "#fff", // Set the y-axis label colors to white
+          },
+          grid: {
+            color: 'rgba(255, 255, 255, 0.1)' // Optional: set grid line colors
+          }
+        },
+        x: {
+          ticks: {
+            color: "#fff", // Set the x-axis label colors to white
+          },
+          grid: {
+            color: 'rgba(255, 255, 255, 0.1)' // Optional: set grid line colors
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          labels: {
+            color: "#fff" // Set the legend label colors to white
+          }
+        }
+      }
+    }
+  });
+}
+
+
+
+    </script>
+  <!-- Ionicon -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
